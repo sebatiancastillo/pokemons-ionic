@@ -5,6 +5,7 @@ export const Global = {
     // url: 'http://localhost:3000/'
     urlBase: 'https://pokeapi.co/api/v2/',
     urlPokemon: 'https://pokeapi.co/api/v2/pokemon/',
+    urlImg: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/'
     // url: 'https://jsonplaceholder.typicode.com/'
     // url: 'http://172.16.12.24:3000/'
 }

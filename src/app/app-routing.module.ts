@@ -19,7 +19,7 @@ const routes: Routes = [
         loadChildren: () => import('./pokemon/pokemon.module').then( m => m.PokemonPageModule)
       },
       {
-        path: 'pokemon-detail',
+        path: 'pokemon-detail/:index',
         loadChildren: () => import('./pokemon/pokemon-detalle/pokemon-detalle.module').then( m => m.PokemonDetallePageModule)
       }
     ]
