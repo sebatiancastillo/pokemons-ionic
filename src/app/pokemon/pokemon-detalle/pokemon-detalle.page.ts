@@ -10,11 +10,11 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class PokemonDetallePage implements OnInit {
 
-  details: any;
+  detallePokemon: any;
 
   slideOpts = {//Parametro que permite mover las imagenes
     autoplay: {//Le indico que me corra las imagenes automaticamente
-      delay: 1000,
+      delay: 4000,
       disableOnInteraction: false
     }
   };
@@ -25,10 +25,10 @@ export class PokemonDetallePage implements OnInit {
 
   ngOnInit() {
     let index = this.route.snapshot.paramMap.get('index');
-    this.pokemonDetalleService.getPokeDetails(index).subscribe(details => {
-      this.details = details;
-      console.log('this.details');
-      console.log(this.details);
+    this.pokemonDetalleService.getDetallePokemon(index).subscribe(detallePokemon => {
+      this.detallePokemon = detallePokemon;
+      console.log('this.detallePokemon');
+      console.log(this.detallePokemon);
     });
   }
 

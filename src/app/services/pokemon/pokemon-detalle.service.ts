@@ -17,7 +17,7 @@ export class PokemonDetalleService {
     this.urlImg = Global.urlImg;
    }
 
-   getPokeDetails(index) {
+   getDetallePokemon(index) {
     return this.http.get(`${this.url}/${index}`).pipe(
       map(poke => {
         let sprites = Object.keys(poke['sprites']);
