@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 
 import { IonInfiniteScroll } from '@ionic/angular';
-import {PokemonService} from './../services/pokemon/pokemon.service'; 
+import {PokemonService} from './../services/pokemon/pokemon.service';
 
 
 @Component({
