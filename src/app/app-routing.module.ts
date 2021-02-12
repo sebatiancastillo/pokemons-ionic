@@ -11,6 +11,27 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'pokemon',
+    children: [
+      {
+        path: '',
+        loadChildren: () => import('./pokemon/pokemon.module').then( m => m.PokemonPageModule)
+      },
+      {
+        path: 'pokemon-detail',
+        loadChildren: () => import('./pokemon/pokemon-detalle/pokemon-detalle.module').then( m => m.PokemonDetallePageModule)
+      }
+    ]
+  },
+  {
+    path: 'pokemon-habitat',
+    loadChildren: () => import('./pokemon-habitat/pokemon-habitat.module').then( m => m.PokemonHabitatPageModule)
+  },
+  {
+    path: 'pokemon-form',
+    loadChildren: () => import('./pokemon-form/pokemon-form.module').then( m => m.PokemonFormPageModule)
+  },
 ];
 
 @NgModule({
